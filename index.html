@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,12 +9,22 @@
 <meta property="og:description" content="11+ years in Telecom BSS: Billing, CSM and Mediation. Requirements, solution design and Agile delivery.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231B2433'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='30' font-weight='700' text-anchor='middle' fill='%237FB3E6'%3EPD%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0e1420;--bg2:#131b2b;--card:#182235;--line:#26334b;
-  --text:#e8edf5;--muted:#9aa8bd;--accent:#7fb3e6;--accent2:#4f8fd0;
-  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --bg:#0a0f1a;--bg2:#111827;--card:#1a2235;--line:rgba(255,255,255,.08);
+  --text:#f0f2f5;--muted:#94a3b8;--accent:#3b82f6;--accent2:#06b6d4;
+  --shadow:0 4px 24px rgba(0,0,0,.3);
 }
+html:not([data-theme="light"]) .hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(59,130,246,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.06) 1px,transparent 1px);background-size:60px 60px;-webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);pointer-events:none}
+html:not([data-theme="light"]) .hero:before{background:radial-gradient(circle,#3b82f6 0%,transparent 65%);opacity:.22}
+html:not([data-theme="light"]) .hero h1 .grad,html:not([data-theme="light"]) .logo span{background:linear-gradient(135deg,#3b82f6,#06b6d4);-webkit-background-clip:text;background-clip:text;color:transparent}
+html:not([data-theme="light"]) .photo-wrap:before{background:conic-gradient(from 140deg,#3b82f6,#06b6d4,#8b5cf6,#3b82f6)}
+html:not([data-theme="light"]) .btn.primary{background:linear-gradient(135deg,#3b82f6,#06b6d4);border-color:transparent;color:#fff}
+html:not([data-theme="light"]) .btn.primary:hover{box-shadow:0 0 24px rgba(59,130,246,.4)}
+html:not([data-theme="light"]) .card:hover{border-color:rgba(59,130,246,.35);box-shadow:0 0 24px rgba(59,130,246,.12)}
 html[data-theme="light"]{
   --bg:#ffffff;--bg2:#f4f6f9;--card:#ffffff;--line:#e2e7ee;
   --text:#1a2332;--muted:#5a6678;--accent:#1e4e8c;--accent2:#14386a;
@@ -29,7 +39,7 @@ html[data-theme="light"] .btn.ghost:hover{background:rgba(30,78,140,.06)}
 html[data-theme="light"] .dot{background:#2e8b57;box-shadow:0 0 0 4px rgba(46,139,87,.15)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,-apple-system,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 img,svg{max-width:100%}
 .wrap{width:min(1120px,92%);margin:0 auto}
@@ -61,7 +71,7 @@ header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 8
 /* hero */
 .hero{padding:96px 0 72px;position:relative;overflow:hidden}
 .hero:before{content:"";position:absolute;inset:-20% -10% auto auto;width:560px;height:560px;background:radial-gradient(circle,var(--accent2) 0%,transparent 65%);opacity:.18;pointer-events:none}
-.hero-grid{position:relative;display:grid;grid-template-columns:1fr 340px;gap:56px;align-items:center}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 340px;gap:56px;align-items:center}
 .photo-wrap{position:relative;justify-self:center;width:300px;height:300px}
 .photo-wrap:before{content:"";position:absolute;inset:-14px;border-radius:50%;background:conic-gradient(from 140deg,var(--accent),#b7d6f5,var(--accent2),var(--accent))}
 .photo-wrap:after{content:"";position:absolute;inset:-6px;border-radius:50%;background:var(--bg)}
